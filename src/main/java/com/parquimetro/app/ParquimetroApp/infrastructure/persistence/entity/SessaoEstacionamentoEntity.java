@@ -1,4 +1,4 @@
-package com.parquimetro.app.ParquimetroApp.entities;
+package com.parquimetro.app.parquimetroapp.infrastructure.persistence.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
