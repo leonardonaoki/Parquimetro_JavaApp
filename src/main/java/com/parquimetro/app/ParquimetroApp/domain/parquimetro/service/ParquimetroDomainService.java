@@ -1,9 +1,9 @@
-package com.parquimetro.app.parquimetroapp.domain.parquimetro.service;
+package com.parquimetro.app.ParquimetroApp.domain.parquimetro.service;
 
-import com.parquimetro.app.parquimetroapp.domain.pagination.Pagination;
-import com.parquimetro.app.parquimetroapp.domain.parquimetro.entity.Parquimetro;
-import com.parquimetro.app.parquimetroapp.domain.parquimetro.exception.ParquimetroNotFoundException;
-import com.parquimetro.app.parquimetroapp.domain.parquimetro.gateway.ParquimetroGateway;
+import com.parquimetro.app.ParquimetroApp.domain.pagination.Pagination;
+import com.parquimetro.app.ParquimetroApp.domain.parquimetro.entity.Parquimetro;
+import com.parquimetro.app.ParquimetroApp.domain.parquimetro.exception.ParquimetroNotFoundException;
+import com.parquimetro.app.ParquimetroApp.domain.parquimetro.gateway.ParquimetroGateway;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;

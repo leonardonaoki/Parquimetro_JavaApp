@@ -1,4 +1,4 @@
-package com.parquimetro.app.parquimetroapp.domain;
+package com.parquimetro.app.ParquimetroApp.domain;
 
 import lombok.Getter;
 

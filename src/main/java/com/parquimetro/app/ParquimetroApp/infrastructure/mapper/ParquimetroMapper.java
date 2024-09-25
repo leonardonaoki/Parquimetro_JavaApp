@@ -1,16 +1,16 @@
-package com.parquimetro.app.parquimetroapp.infrastructure.mapper;
+package com.parquimetro.app.ParquimetroApp.infrastructure.mapper;
 
 import com.parquimetro.app.parquimetroapp.application.dto.CreateUpdateParquimetroDTO;
 import com.parquimetro.app.parquimetroapp.application.dto.PaginationDTO;
 import com.parquimetro.app.parquimetroapp.application.dto.ParquimetroDTO;
 import com.parquimetro.app.parquimetroapp.application.dto.ParquimetroPaginadoDTO;
 
-import com.parquimetro.app.parquimetroapp.application.parquimetro.usecase.CreateParquimetroUseCase;
-import com.parquimetro.app.parquimetroapp.application.parquimetro.usecase.GetAllParquimetrosUseCase;
-import com.parquimetro.app.parquimetroapp.application.parquimetro.usecase.GetParquimetroByIdUseCase;
-import com.parquimetro.app.parquimetroapp.application.parquimetro.usecase.UpdateParquimetroUseCase;
-import com.parquimetro.app.parquimetroapp.application.parquimetro.usecase.UpdateParquimetroUseCase.Output;
-import com.parquimetro.app.parquimetroapp.domain.pagination.Pagination;
+import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.CreateParquimetroUseCase;
+import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.GetAllParquimetrosUseCase;
+import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.GetParquimetroByIdUseCase;
+import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.UpdateParquimetroUseCase;
+import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.UpdateParquimetroUseCase.Output;
+import com.parquimetro.app.ParquimetroApp.domain.pagination.Pagination;
 
 public class ParquimetroMapper {
 

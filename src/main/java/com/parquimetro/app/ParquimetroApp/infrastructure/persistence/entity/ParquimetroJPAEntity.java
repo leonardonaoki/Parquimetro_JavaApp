@@ -1,6 +1,8 @@
-package com.parquimetro.app.parquimetroapp.infrastructure.persistence.entity;
+package com.parquimetro.app.ParquimetroApp.infrastructure.persistence.entity;
 
-import com.parquimetro.app.parquimetroapp.domain.parquimetro.entity.Parquimetro;
+import com.parquimetro.app.ParquimetroApp.domain.parquimetro.entity.Parquimetro;
+import com.parquimetro.app.ParquimetroApp.infrastructure.persistence.entity.SessaoEstacionamentoEntity.Status;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
@@ -26,9 +28,17 @@ public class ParquimetroJPAEntity {
     @DecimalMin(value = "0.1")
     @Positive
     private Double precoPorHora;
+    
+    @Enumerated(EnumType.STRING)
+    private Status status;
+    
+    public enum Status {
+        OCUPADO,
+        LIVRE
+    }
 
     public static ParquimetroJPAEntity of(Parquimetro parquimetro) {
-        return new ParquimetroJPAEntity(parquimetro.getId(), parquimetro.getEndereco(), parquimetro.getPrecoPorHora());
+        return new ParquimetroJPAEntity(parquimetro.getId(), parquimetro.getEndereco(), parquimetro.getPrecoPorHora(),parquimetro.getStatus());
     }
 
     public Parquimetro toParquimetro() {

@@ -1,10 +1,10 @@
-package com.parquimetro.app.parquimetroapp.domain.pagination;
+package com.parquimetro.app.ParquimetroApp.domain.pagination;
 
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import com.parquimetro.app.parquimetroapp.domain.parquimetro.entity.Parquimetro;
+import com.parquimetro.app.ParquimetroApp.domain.parquimetro.entity.Parquimetro;
 
 public record Pagination<T>(int page, int size, int total, int totalPages, List<T> items) {
 

@@ -1,6 +1,6 @@
-package com.parquimetro.app.parquimetroapp.application.parquimetro.usecase;
+package com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase;
 
-import com.parquimetro.app.parquimetroapp.domain.parquimetro.service.ParquimetroDomainService;
+import com.parquimetro.app.ParquimetroApp.domain.parquimetro.service.ParquimetroDomainService;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;

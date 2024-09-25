@@ -1,4 +1,4 @@
-package com.parquimetro.app.parquimetroapp.infrastructure.persistence.entity;
+package com.parquimetro.app.ParquimetroApp.infrastructure.persistence.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -17,10 +17,10 @@ public class SessaoEstacionamentoEntity {
 
     //Será um índice
     private String placaDoCarro;
+    private Long idParquimetro;
 
     // Informações sobre a sessão
-    private LocalDateTime horarioInicio;
-    private LocalDateTime horarioFim;
+    private Long tempoDeUso;
     private BigDecimal custoTotal;
 
     @Enumerated(EnumType.STRING)
@@ -30,7 +30,7 @@ public class SessaoEstacionamentoEntity {
     private PaymentMethod metodoDePagamento;
 
     public enum Status {
-        GERAR_MULTA,
+        EM_ATRASO,
         PAGO
     }
 

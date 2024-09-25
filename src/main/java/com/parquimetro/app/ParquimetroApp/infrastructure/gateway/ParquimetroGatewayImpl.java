@@ -1,15 +1,15 @@
-package com.parquimetro.app.parquimetroapp.infrastructure.gateway;
+package com.parquimetro.app.ParquimetroApp.infrastructure.gateway;
 
 import java.util.Optional;
 
-import com.parquimetro.app.parquimetroapp.infrastructure.persistence.entity.ParquimetroJPAEntity;
+import com.parquimetro.app.ParquimetroApp.infrastructure.persistence.entity.ParquimetroJPAEntity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.parquimetro.app.parquimetroapp.domain.pagination.Pagination;
-import com.parquimetro.app.parquimetroapp.domain.parquimetro.entity.Parquimetro;
-import com.parquimetro.app.parquimetroapp.domain.parquimetro.gateway.ParquimetroGateway;
-import com.parquimetro.app.parquimetroapp.infrastructure.persistence.repository.IParquimetroRepository;
+import com.parquimetro.app.ParquimetroApp.domain.pagination.Pagination;
+import com.parquimetro.app.ParquimetroApp.domain.parquimetro.entity.Parquimetro;
+import com.parquimetro.app.ParquimetroApp.domain.parquimetro.gateway.ParquimetroGateway;
+import com.parquimetro.app.ParquimetroApp.infrastructure.persistence.repository.IParquimetroRepository;
 
 import lombok.RequiredArgsConstructor;
 

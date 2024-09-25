@@ -1,6 +1,6 @@
-package com.parquimetro.app.parquimetroapp.domain.parquimetro.exception;
+package com.parquimetro.app.ParquimetroApp.domain.parquimetro.exception;
 
-import com.parquimetro.app.parquimetroapp.domain.DomainException;
+import com.parquimetro.app.ParquimetroApp.domain.DomainException;
 
 public class ParquimetroNotFoundException extends DomainException {
 

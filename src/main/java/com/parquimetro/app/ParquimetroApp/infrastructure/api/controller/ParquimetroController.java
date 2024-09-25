@@ -1,4 +1,4 @@
-package com.parquimetro.app.parquimetroapp.infrastructure.api.controller;
+package com.parquimetro.app.ParquimetroApp.infrastructure.api.controller;
 
 import com.parquimetro.app.parquimetroapp.api.controller.ParquimetroApi;
 import org.springframework.http.HttpStatus;
@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.parquimetro.app.parquimetroapp.application.dto.CreateUpdateParquimetroDTO;
 import com.parquimetro.app.parquimetroapp.application.dto.ParquimetroDTO;
 import com.parquimetro.app.parquimetroapp.application.dto.ParquimetroPaginadoDTO;
-import com.parquimetro.app.parquimetroapp.application.parquimetro.usecase.CreateParquimetroUseCase;
-import com.parquimetro.app.parquimetroapp.application.parquimetro.usecase.DeleteParquimetroUseCase;
-import com.parquimetro.app.parquimetroapp.application.parquimetro.usecase.GetAllParquimetrosUseCase;
-import com.parquimetro.app.parquimetroapp.application.parquimetro.usecase.GetParquimetroByIdUseCase;
-import com.parquimetro.app.parquimetroapp.application.parquimetro.usecase.UpdateParquimetroUseCase;
-import com.parquimetro.app.parquimetroapp.infrastructure.mapper.ParquimetroMapper;
+import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.CreateParquimetroUseCase;
+import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.DeleteParquimetroUseCase;
+import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.GetAllParquimetrosUseCase;
+import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.GetParquimetroByIdUseCase;
+import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.UpdateParquimetroUseCase;
+import com.parquimetro.app.ParquimetroApp.infrastructure.mapper.ParquimetroMapper;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;

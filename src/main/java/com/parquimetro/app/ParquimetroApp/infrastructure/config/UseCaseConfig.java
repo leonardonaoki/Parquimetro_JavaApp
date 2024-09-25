@@ -1,11 +1,11 @@
-package com.parquimetro.app.parquimetroapp.infrastructure.config;
+package com.parquimetro.app.ParquimetroApp.infrastructure.config;
 
-import com.parquimetro.app.parquimetroapp.application.parquimetro.usecase.*;
+import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.*;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.parquimetro.app.parquimetroapp.domain.parquimetro.service.ParquimetroDomainService;
+import com.parquimetro.app.ParquimetroApp.domain.parquimetro.service.ParquimetroDomainService;
 
 @Configuration
 public class UseCaseConfig {

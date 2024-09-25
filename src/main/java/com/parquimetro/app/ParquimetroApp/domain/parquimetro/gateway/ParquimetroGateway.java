@@ -1,9 +1,9 @@
-package com.parquimetro.app.parquimetroapp.domain.parquimetro.gateway;
+package com.parquimetro.app.ParquimetroApp.domain.parquimetro.gateway;
 
 import java.util.Optional;
 
-import com.parquimetro.app.parquimetroapp.domain.pagination.Pagination;
-import com.parquimetro.app.parquimetroapp.domain.parquimetro.entity.Parquimetro;
+import com.parquimetro.app.ParquimetroApp.domain.pagination.Pagination;
+import com.parquimetro.app.ParquimetroApp.domain.parquimetro.entity.Parquimetro;
 
 public interface ParquimetroGateway {
 

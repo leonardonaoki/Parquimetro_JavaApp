@@ -1,4 +1,4 @@
-package com.parquimetro.app.parquimetroapp.infrastructure.api.controller;
+package com.parquimetro.app.ParquimetroApp.infrastructure.api.controller;
 
 import java.time.Instant;
 
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.parquimetro.app.parquimetroapp.domain.DomainException;
+import com.parquimetro.app.ParquimetroApp.domain.DomainException;
 
 @RestControllerAdvice
 public class ParquimetroExceptionHandler extends ResponseEntityExceptionHandler {

@@ -1,4 +1,4 @@
-package com.parquimetro.app.parquimetroapp;
+package com.parquimetro.app.ParquimetroApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
