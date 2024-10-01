@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.parquimetro.app.ParquimetroApp.domain.parquimetro.service.ParquimetroDomainService;
+import com.parquimetro.app.ParquimetroApp.domain.parquimetro.service.TicketParquimetroDomainService;
 
 @Configuration
 public class UseCaseConfig {
@@ -33,6 +34,29 @@ public class UseCaseConfig {
     @Bean
     UpdateParquimetroUseCase updateParquimetroUseCase(final ParquimetroDomainService parquimetroDomainService) {
         return new UpdateParquimetroUseCase(parquimetroDomainService);
+    }
+    
+    @Bean
+    UpdateSaidaUseCase updateSaidaUseCase(final TicketParquimetroDomainService ticketParquimetroDomainService) {
+        return new UpdateSaidaUseCase(ticketParquimetroDomainService);
+    }
+    
+    @Bean
+    CreateEntradaUseCase createEntradaUseCase(final TicketParquimetroDomainService ticketParquimetroDomainService) {
+        return new CreateEntradaUseCase(ticketParquimetroDomainService);
+    }
+    
+    @Bean
+    BuscaDividaCarroUseCase buscaDividaCarroUseCase(final TicketParquimetroDomainService ticketParquimetroDomainService) {
+        return new BuscaDividaCarroUseCase(ticketParquimetroDomainService);
+    }
+    @Bean
+    PagarDividaEmAbertoUseCase pagarDividaEmAbertoUseCase(final TicketParquimetroDomainService ticketParquimetroDomainService) {
+        return new PagarDividaEmAbertoUseCase(ticketParquimetroDomainService);
+    }
+    @Bean
+    RecebePagamentoUseCase recebePagamentoUseCase(final TicketParquimetroDomainService ticketParquimetroDomainService) {
+        return new RecebePagamentoUseCase(ticketParquimetroDomainService);
     }
 
 }

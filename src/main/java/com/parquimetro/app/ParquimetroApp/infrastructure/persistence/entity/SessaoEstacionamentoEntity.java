@@ -17,21 +17,24 @@ public class SessaoEstacionamentoEntity {
 
     //Será um índice
     private String placaDoCarro;
+    
     private Long idParquimetro;
 
     // Informações sobre a sessão
     private Long tempoDeUso;
+    
     private BigDecimal custoTotal;
 
     @Enumerated(EnumType.STRING)
-    private Status status;
+    private StatusSessao status;
 
     @Enumerated(EnumType.STRING)
     private PaymentMethod metodoDePagamento;
 
-    public enum Status {
+    public enum StatusSessao {
         EM_ATRASO,
-        PAGO
+        PAGO,
+        PENDENTE_PAGAMENTO
     }
 
     public enum PaymentMethod {
