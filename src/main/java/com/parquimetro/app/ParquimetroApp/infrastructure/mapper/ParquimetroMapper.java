@@ -1,9 +1,6 @@
 package com.parquimetro.app.ParquimetroApp.infrastructure.mapper;
 
-import com.parquimetro.app.parquimetroapp.application.dto.CreateUpdateParquimetroDTO;
-import com.parquimetro.app.parquimetroapp.application.dto.PaginationDTO;
-import com.parquimetro.app.parquimetroapp.application.dto.ParquimetroDTO;
-import com.parquimetro.app.parquimetroapp.application.dto.ParquimetroPaginadoDTO;
+import com.parquimetro.app.ParquimetroApp.application.dto.*;
 
 import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.CreateParquimetroUseCase;
 import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.GetAllParquimetrosUseCase;
@@ -23,7 +20,10 @@ public class ParquimetroMapper {
     public ParquimetroDTO toDTO(final CreateParquimetroUseCase.Output output) {
         return new ParquimetroDTO().id(output.id())
                     .endereco(output.endereco())
-                    .precoPorHora(output.precoPorHora());
+                    .precoPorHora(output.precoPorHora())
+                    .dataCadastro(output.horaCadastro())
+                    .status(output.Status())
+                ;
     }
 
     public ParquimetroPaginadoDTO toDTO(final Pagination<GetAllParquimetrosUseCase.Output> pagination) {
@@ -47,7 +47,9 @@ public class ParquimetroMapper {
         return new ParquimetroDTO()
                 .id(output.id())
                 .endereco(output.endereco())
-                .precoPorHora(output.precoPorHora());
+                .precoPorHora(output.precoPorHora())
+                .status(output.status())
+                .dataCadastro(output.dataCadastro());
     }
 
     public ParquimetroDTO toDTO(final GetAllParquimetrosUseCase.Output output) {
@@ -57,12 +59,12 @@ public class ParquimetroMapper {
                 .precoPorHora(output.precoPorHora());
     }
 
-    public CreateParquimetroUseCase.Input from(final CreateUpdateParquimetroDTO dto) {
+    public CreateParquimetroUseCase.Input from(final CreateParquimetroDTO dto) {
         return new CreateParquimetroUseCase.Input(dto.getEndereco(), dto.getPrecoPorHora());
     }
 
-    public UpdateParquimetroUseCase.Input from(final Long id, final CreateUpdateParquimetroDTO dto) {
-        return new UpdateParquimetroUseCase.Input(id, dto.getEndereco(), dto.getPrecoPorHora());
+    public UpdateParquimetroUseCase.Input from(final Long id, final UpdateParquimetroDTO dto) {
+        return new UpdateParquimetroUseCase.Input(id, dto.getEndereco(), dto.getPrecoPorHora(),dto.getStatus());
     }
 
 }

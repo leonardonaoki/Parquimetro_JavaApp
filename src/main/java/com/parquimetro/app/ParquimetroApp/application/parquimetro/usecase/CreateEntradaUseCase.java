@@ -6,6 +6,8 @@ import com.parquimetro.app.ParquimetroApp.domain.parquimetro.service.TicketParqu
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @RequiredArgsConstructor
 public class CreateEntradaUseCase {
 
@@ -15,10 +17,10 @@ public class CreateEntradaUseCase {
 	
 	public void execute(Input input) {
         ticketParquimetroDomainService.registraEntradaParquimetro(
-        		TicketParquimetro.newTicket(input.placaCarro, input.idParquimetro) );
+        		TicketParquimetro.newTicket(input.placaCarro, input.idParquimetro, LocalDateTime.now()) );
  
     }
 
-    public record Input(String placaCarro, Long idParquimetro) {
+    public record Input(String placaCarro, Long idParquimetro, LocalDateTime horaCadastro) {
     }
 }

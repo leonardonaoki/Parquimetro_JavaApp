@@ -2,6 +2,7 @@ package com.parquimetro.app.ParquimetroApp.infrastructure.persistence.entity;
 
 import java.time.LocalDateTime;
 
+import com.parquimetro.app.ParquimetroApp.domain.parquimetro.entity.Parquimetro;
 import org.springframework.data.domain.Persistable;
 
 import com.parquimetro.app.ParquimetroApp.domain.parquimetro.entity.TicketParquimetro;
@@ -37,7 +38,9 @@ public class TicketParquimetroEntity {
     
     public static TicketParquimetroEntity of(TicketParquimetro ticket) {
         return new TicketParquimetroEntity(ticket.getId(), ticket.getIdParquimetro(), ticket.getPlacaCarro()
-        		,ticket.getHoraSaida(),ticket.getHoraCadastro());
+        		,ticket.getHoraCadastro(),ticket.getHoraSaida());
     }
-
+    public TicketParquimetro toTicketParquimetro() {
+        return TicketParquimetro.with(this.id,this.placaCarro,this.idParquimetro,this.horaCadastro,this.horaSaida);
+    }
 }

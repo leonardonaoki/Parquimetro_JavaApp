@@ -18,7 +18,9 @@ public class GatewayConfig {
     }   
     
     @Bean
-    TicketParquimetroGateway ticketParquimetroGateway(final ITicketParquimetroRepository ticketParquimetroRepository) {
-        return new TicketParquimetroGatewayImpl(ticketParquimetroRepository);
+    TicketParquimetroGateway ticketParquimetroGateway(final ITicketParquimetroRepository ticketParquimetroRepository,
+                                                      final IParquimetroRepository parquimetroJPARepository,
+                                                      final ISessaoEstacionamentoRepository sessaoEstacionamentoJPARepository) {
+        return new TicketParquimetroGatewayImpl(ticketParquimetroRepository,parquimetroJPARepository,sessaoEstacionamentoJPARepository);
     }   
 }

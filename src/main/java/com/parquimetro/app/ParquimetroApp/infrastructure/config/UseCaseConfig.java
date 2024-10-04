@@ -22,6 +22,11 @@ public class UseCaseConfig {
     }
 
     @Bean
+    GetAllTicketParquimetrosUseCase GetAllTicketParquimetrosUseCase(final TicketParquimetroDomainService ticketParquimetroDomainService) {
+        return new GetAllTicketParquimetrosUseCase(ticketParquimetroDomainService);
+    }
+
+    @Bean
     GetAllParquimetrosUseCase getAllParquimetrosUseCase(final ParquimetroDomainService parquimetroDomainService) {
         return new GetAllParquimetrosUseCase(parquimetroDomainService);
     }
@@ -58,5 +63,4 @@ public class UseCaseConfig {
     RecebePagamentoUseCase recebePagamentoUseCase(final TicketParquimetroDomainService ticketParquimetroDomainService) {
         return new RecebePagamentoUseCase(ticketParquimetroDomainService);
     }
-
 }

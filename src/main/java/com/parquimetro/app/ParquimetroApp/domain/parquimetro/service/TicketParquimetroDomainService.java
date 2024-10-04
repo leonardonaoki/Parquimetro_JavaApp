@@ -2,6 +2,8 @@ package com.parquimetro.app.ParquimetroApp.domain.parquimetro.service;
 
 import java.math.BigDecimal;
 
+import com.parquimetro.app.ParquimetroApp.domain.pagination.Pagination;
+import com.parquimetro.app.ParquimetroApp.domain.parquimetro.entity.Parquimetro;
 import com.parquimetro.app.ParquimetroApp.domain.parquimetro.entity.TicketParquimetro;
 import com.parquimetro.app.ParquimetroApp.domain.parquimetro.gateway.TicketParquimetroGateway;
 
@@ -13,9 +15,12 @@ public class TicketParquimetroDomainService {
 
 	 @NonNull
 	 private final TicketParquimetroGateway ticketParquimetroGateway;
-	 
-	 
-	 public void registraEntradaParquimetro(TicketParquimetro ticket) {
+
+	public Pagination<TicketParquimetro> listAllTicketsParquimetroUseCase(int page, int size) {
+		return ticketParquimetroGateway.findAll(page, size);
+	}
+
+	public void registraEntradaParquimetro(TicketParquimetro ticket) {
 		 ticketParquimetroGateway.createEntradaParquimetro(ticket);        
 	       
 	 }

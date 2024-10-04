@@ -98,8 +98,15 @@
 							<inputSpec>${project.basedir}/src/main/resources/api/parquimetro.yml</inputSpec>
 							<language>spring</language>
 							<generateSupportingFiles>false</generateSupportingFiles>
-							<apiPackage>com.parquimetro.app.parquimetroapp.api.controller</apiPackage>
-							<modelPackage>com.parquimetro.app.parquimetroapp.application.dto</modelPackage>
+							<apiPackage>com.parquimetro.app.ParquimetroApp.api.controller</apiPackage>
+							<modelPackage>com.parquimetro.app.ParquimetroApp.application.dto</modelPackage>
+							<typeMappings>
+								<typeMapping>OffsetDateTime=java.time.LocalDateTime</typeMapping>
+							</typeMappings>
+							<importMappings>
+								<importMapping>java.time.OffsetDateTime=java.time.LocalDateTime</importMapping>
+							</importMappings>
+
 							<modelNameSuffix>DTO</modelNameSuffix>
 							<configOptions>
 								<interfaceOnly>true</interfaceOnly>

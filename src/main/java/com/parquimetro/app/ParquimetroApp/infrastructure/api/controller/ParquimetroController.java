@@ -1,18 +1,12 @@
 package com.parquimetro.app.ParquimetroApp.infrastructure.api.controller;
 
-import com.parquimetro.app.parquimetroapp.api.controller.ParquimetroApi;
+import com.parquimetro.app.ParquimetroApp.api.controller.ParquimetroApi;
+import com.parquimetro.app.ParquimetroApp.application.dto.*;
+import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.parquimetro.app.parquimetroapp.application.dto.CreateUpdateParquimetroDTO;
-import com.parquimetro.app.parquimetroapp.application.dto.ParquimetroDTO;
-import com.parquimetro.app.parquimetroapp.application.dto.ParquimetroPaginadoDTO;
-import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.CreateParquimetroUseCase;
-import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.DeleteParquimetroUseCase;
-import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.GetAllParquimetrosUseCase;
-import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.GetParquimetroByIdUseCase;
-import com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase.UpdateParquimetroUseCase;
 import com.parquimetro.app.ParquimetroApp.infrastructure.mapper.ParquimetroMapper;
 
 import lombok.NonNull;
@@ -29,7 +23,9 @@ public class ParquimetroController implements ParquimetroApi {
     @NonNull
     private final CreateParquimetroUseCase createParquimetroUseCase;
     @NonNull
-    private final UpdateParquimetroUseCase updateParquimetroUseCase;    
+    private final UpdateParquimetroUseCase updateParquimetroUseCase;
+    @NonNull
+    private final UpdateSaidaUseCase updateSaidaUseCase;
     @NonNull
     private final DeleteParquimetroUseCase deleteParquimetroUseCase;
     @NonNull
@@ -50,17 +46,16 @@ public class ParquimetroController implements ParquimetroApi {
     }
 
     @Override
-    public ResponseEntity<ParquimetroDTO> criaParquimetro(final CreateUpdateParquimetroDTO Parquimetro) {
+    public ResponseEntity<ParquimetroDTO> criaParquimetro(final CreateParquimetroDTO Parquimetro) {
         final var createdParquimetro = createParquimetroUseCase.execute(ParquimetroMapper.from(Parquimetro));
         return ResponseEntity.status(HttpStatus.CREATED).body(ParquimetroMapper.toDTO(createdParquimetro));
     }
 
     @Override
-    public ResponseEntity<ParquimetroDTO> atualizaUmParquimetroPeloId(final Long id, final CreateUpdateParquimetroDTO Parquimetro) {
+    public ResponseEntity<ParquimetroDTO> atualizaUmParquimetroPeloId(final Long id, final UpdateParquimetroDTO Parquimetro) {
         final var updatedParquimetro = updateParquimetroUseCase.execute(ParquimetroMapper.from(id, Parquimetro));
         return ResponseEntity.ok(ParquimetroMapper.toDTO(updatedParquimetro));
     }
-
     @Override
     public ResponseEntity<Void> deletaParquimetroPeloId(final Long id) {
         deleteParquimetroUseCase.execute(id);
