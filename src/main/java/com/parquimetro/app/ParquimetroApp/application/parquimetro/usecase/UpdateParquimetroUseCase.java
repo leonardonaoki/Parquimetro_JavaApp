@@ -1,6 +1,5 @@
 package com.parquimetro.app.ParquimetroApp.application.parquimetro.usecase;
 
-import com.parquimetro.app.ParquimetroApp.application.dto.CreateUpdateParquimetroDTO;
 import com.parquimetro.app.ParquimetroApp.application.dto.ParquimetroDTO;
 import com.parquimetro.app.ParquimetroApp.application.dto.UpdateParquimetroDTO;
 import com.parquimetro.app.ParquimetroApp.domain.parquimetro.entity.Parquimetro;

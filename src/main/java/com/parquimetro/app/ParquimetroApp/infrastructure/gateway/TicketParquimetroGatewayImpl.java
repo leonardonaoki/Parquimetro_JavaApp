@@ -6,7 +6,6 @@ import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Optional;
 
-import com.parquimetro.app.ParquimetroApp.application.dto.CreateUpdateParquimetroDTO;
 import com.parquimetro.app.ParquimetroApp.application.dto.ParquimetroDTO;
 import com.parquimetro.app.ParquimetroApp.domain.pagination.Pagination;
 import com.parquimetro.app.ParquimetroApp.domain.parquimetro.entity.Parquimetro;

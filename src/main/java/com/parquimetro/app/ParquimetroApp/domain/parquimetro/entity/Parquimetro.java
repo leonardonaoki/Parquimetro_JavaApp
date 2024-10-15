@@ -1,14 +1,10 @@
 package com.parquimetro.app.ParquimetroApp.domain.parquimetro.entity;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
-import com.parquimetro.app.ParquimetroApp.application.dto.CreateUpdateParquimetroDTO;
-
-
 import com.parquimetro.app.ParquimetroApp.application.dto.ParquimetroDTO;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
